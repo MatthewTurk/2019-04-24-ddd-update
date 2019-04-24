@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": [
+        {
+            "name": "ppv1d",
+            "url": "data/ppv1d.json"
+        },
+        {
+            "name": "ppv_slices",
+            "url": "data/ppv_slices.json"
+        }
+    ],
+    "config": {
+        "facet": {
+            "spacing": 0
+        }
+    },
+    "width": 200,
+    "height": 200,
+    "mark": "line",
+    "encoding": {
+        "column": {
+            "field": "gamma",
+            "type": "quantitative",
+            "header": {
+                "titleFontSize": 20,
+                "labelFontSize": 15,
+                "format": ".3",
+                "formatType": "number"
+            }
+        },
+        "row": {
+            "field": "beta",
+            "type": "quantitative",
+            "header": {
+                "titleFontSize": 20,
+                "labelFontSize": 15,
+                "format": ".3",
+                "formatType": "number"
+            }
+        },
+        "y": {
+            "field": "value",
+            "type": "quantitative"
+        },
+        "x": {
+            "field": "variable",
+            "type": "quantitative"
+        }
+    }
+}

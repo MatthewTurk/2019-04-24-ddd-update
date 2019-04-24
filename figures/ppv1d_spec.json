@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+        "url": "data/ppv1d.json"
+    },
+    "config": {
+        "facet": {
+            "spacing": 0
+        }
+    },
+    "width": 100,
+    "height": 100,
+    "mark": "line",
+    "encoding": {
+        "column": {
+            "field": "gamma",
+            "type": "quantitative",
+            "header": {
+                "titleFontSize": 20,
+                "labelFontSize": 15,
+                "format": ".3",
+                "formatType": "number"
+            }
+        },
+        "row": {
+            "field": "beta",
+            "type": "quantitative",
+            "header": {
+                "titleFontSize": 20,
+                "labelFontSize": 15,
+                "format": ".3",
+                "formatType": "number"
+            }
+        },
+        "y": {
+            "field": "value",
+            "type": "quantitative"
+        },
+        "x": {
+            "field": "variable",
+            "type": "quantitative"
+        }
+    }
+}
